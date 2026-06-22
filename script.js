@@ -285,7 +285,7 @@
   const TERMINAL_COMMANDS = [
     { cmd: "whoami", out: "LUCA_JIN_LEE_BARROS  [GAME_DEV / BR-KR]" },
     { cmd: "dir /engines", out: "GODOT.EXE   UNITY.EXE   GDEVELOP.EXE   CONSTRUCT.EXE" },
-    { cmd: "type influences.lib", out: "TOLKIEN_LEGENDARIUM.TXT\n2001_A_SPACE_ODYSSEY.MOV" },
+    { cmd: "type influences.lib", out: "TOLKIEN.TXT\nELON_MUSK.TXT" },
     { cmd: "echo %STATUS%", out: "COMPILING_DREAMS.......... [OK]\nOPEN_TO_COLLAB............ [OK]" }
   ];
 
