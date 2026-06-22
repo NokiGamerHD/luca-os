@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+<title>LUCA-OS :: Luca Jin Lee Barros — Game Developer</title>
+<meta name="description" content="Luca Jin Lee Barros — game developer working across Godot, Unity, GDevelop and Construct. A retro fake operating system portfolio.">
+<link rel="icon" type="image/png" href="assets/img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="crt-overlay" aria-hidden="true">
+  <div class="crt-scanlines"></div>
+  <div class="crt-vignette"></div>
+  <div class="crt-flicker"></div>
+</div>
+<div class="noise-layer" aria-hidden="true"></div>
+
+<div id="boot-screen" role="button" tabindex="0" aria-label="Click or press any key to boot LUCA-OS">
+  <pre id="boot-text"></pre>
+  <p id="boot-prompt" class="blink-hidden">PRESS ANY KEY TO CONTINUE_</p>
+</div>
+
+<div id="shutdown-screen" aria-hidden="true">
+  <div class="shutdown-inner">
+    <p>LUCA-OS is shutting down...</p>
+    <p class="shutdown-sub">It's now safe to close this tab.</p>
+    <button id="restart-btn" class="win95-btn">↻ RESTART SYSTEM</button>
+  </div>
+</div>
+
+<main id="desktop">
+
+  <div class="desktop-watermark glitch-text" data-text="LUCA-OS">LUCA-OS</div>
+  <p class="desktop-subwatermark">v1.0 — LEE SYSTEMS, 2026</p>
+
+  <nav class="desktop-icons" aria-label="Desktop applications">
+    <button class="icon-btn" data-open="win-about">
+      <span class="icon-glyph" aria-hidden="true">🗂</span>
+      <span class="icon-label">ABOUT.SYS</span>
+    </button>
+    <button class="icon-btn" data-open="win-links">
+      <span class="icon-glyph" aria-hidden="true">🔗</span>
+      <span class="icon-label">LINKS.EXE</span>
+    </button>
+    <button class="icon-btn" data-open="win-terminal">
+      <span class="icon-glyph" aria-hidden="true">🖥</span>
+      <span class="icon-label">TERMINAL.EXE</span>
+    </button>
+    <a class="icon-btn" href="https://nokigamerhd.itch.io/" target="_blank" rel="noopener noreferrer">
+      <span class="icon-glyph" aria-hidden="true">🎮</span>
+      <span class="icon-label">GAMES.LNK</span>
+    </a>
+  </nav>
+
+  <section class="window" id="win-about" data-title="ABOUT.SYS — User Profile">
+    <header class="title-bar">
+      <span class="title-bar-icon" aria-hidden="true">🗂</span>
+      <span class="title-bar-text">ABOUT.SYS — User Profile</span>
+      <div class="title-bar-controls">
+        <button class="tb-btn" data-action="minimize" aria-label="Minimize">_</button>
+        <button class="tb-btn" data-action="close" aria-label="Close">×</button>
+      </div>
+    </header>
+    <div class="window-body about-body">
+      <div class="about-grid">
+        <div class="about-photo-col">
+          <div class="photo-frame">
+            <img src="assets/img/profile.png" alt="Pixelated retro-style portrait of Luca Jin Lee Barros" class="profile-img">
+          </div>
+          <p class="photo-caption">PHOTO.BMP — 130×158 — 6-BIT COLOR</p>
+        </div>
+        <div class="about-info-col">
+          <h1 class="user-name glitch-text" data-text="LUCA JIN LEE BARROS">LUCA JIN LEE BARROS</h1>
+          <p class="user-role">// Game Developer &amp; Software Engineer-in-training</p>
+
+          <table class="sys-info-table" aria-label="System information">
+            <tbody>
+              <tr><th>ORIGIN</th><td>Brazil — maternal heritage: South Korea</td></tr>
+              <tr><th>AGE</th><td>17 (18 by Korean age reckoning)</td></tr>
+              <tr><th>ENGINES</th><td>Godot · Unity · GDevelop · Construct 2/3</td></tr>
+              <tr><th>STATUS</th><td class="status-ok">ONLINE — open to collaboration</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <hr class="win95-hr">
+
+     <div class="bio-text">
+      <p>Luca Jin Lee Barros is a Brazilian game developer and a 17-year-old student (18 in Korean age) with South Korean roots through his maternal family. He is currently enrolled in a technical high school program specializing in Digital Game Programming, where he studies game development, software engineering fundamentals, and interactive systems design.</p>
+      <p>Throughout his studies, he has worked with multiple game engines, including Godot, Unity, GDevelop, and Construct 2/3, adopting a flexible development approach based on the specific technical and design requirements of each project. His work primarily focuses on gameplay systems, rapid prototyping, and the practical application of software development principles within interactive media.</p>
+      <p>He is currently developing his final graduation project, which combines academic research and practical game development. The project investigates progression systems in digital games, examining how different progression models affect player engagement and retention. Alongside the research dissertation, he is developing an original game that applies the concepts explored in the study, serving as a practical case study for the project's conclusions.</p>
+      <p>Outside the classroom, Luca continues to expand his technical skills through independent projects and self-directed learning. His current interests include game systems design, software architecture, and the development of interactive experiences that combine technical implementation with player-focused design.</p>
+    </div>
+
+      <div class="contact-strip">
+        <a href="mailto:lucajlee@proton.me" class="win95-btn small-btn">✉ EMAIL ME</a>
+      </div>
+    </div>
+    <div class="resize-handle" aria-hidden="true"></div>
+  </section>
+
+  <section class="window" id="win-links" data-title="LINKS.EXE — Network Directory">
+    <header class="title-bar">
+      <span class="title-bar-icon" aria-hidden="true">🔗</span>
+      <span class="title-bar-text">LINKS.EXE — Network Directory</span>
+      <div class="title-bar-controls">
+        <button class="tb-btn" data-action="minimize" aria-label="Minimize">_</button>
+        <button class="tb-btn" data-action="close" aria-label="Close">×</button>
+      </div>
+    </header>
+    <div class="window-body">
+      <p class="links-intro">C:\LUCA\NETWORK&gt; dir /a /external-links</p>
+      <ul class="link-list">
+        <li>
+          <a href="https://nokigamerhd.itch.io/" target="_blank" rel="noopener noreferrer">
+            <span class="link-badge">ITCH</span>
+            <span class="link-name">itch.io — Play my games</span>
+            <span class="link-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/NokiGamerHD" target="_blank" rel="noopener noreferrer">
+            <span class="link-badge">GIT</span>
+            <span class="link-name">GitHub — Source &amp; repositories</span>
+            <span class="link-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://x.com/LucaJLee" target="_blank" rel="noopener noreferrer">
+            <span class="link-badge">X</span>
+            <span class="link-name">X / Twitter</span>
+            <span class="link-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/lucajlee/" target="_blank" rel="noopener noreferrer">
+            <span class="link-badge">IG</span>
+            <span class="link-name">Instagram</span>
+            <span class="link-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://steamcommunity.com/id/lucajlee/" target="_blank" rel="noopener noreferrer">
+            <span class="link-badge">STM</span>
+            <span class="link-name">Steam Profile</span>
+            <span class="link-arrow">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:lucajlee@proton.me">
+            <span class="link-badge">MAIL</span>
+            <span class="link-name">lucajlee@proton.me</span>
+            <span class="link-arrow">→</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="resize-handle" aria-hidden="true"></div>
+  </section>
+
+  <section class="window" id="win-terminal" data-title="TERMINAL.EXE — luca_shell">
+    <header class="title-bar">
+      <span class="title-bar-icon" aria-hidden="true">🖥</span>
+      <span class="title-bar-text">TERMINAL.EXE — luca_shell</span>
+      <div class="title-bar-controls">
+        <button class="tb-btn" data-action="minimize" aria-label="Minimize">_</button>
+        <button class="tb-btn" data-action="close" aria-label="Close">×</button>
+      </div>
+    </header>
+    <div class="window-body terminal-body">
+      <pre class="ascii-logo" id="ascii-logo" aria-label="ASCII art logo: LL"></pre>
+      <pre class="terminal-output" id="terminal-output"></pre>
+      <p class="terminal-line"><span class="prompt">C:\LUCA&gt;</span><span id="terminal-cursor" class="term-cursor">_</span></p>
+    </div>
+    <div class="resize-handle" aria-hidden="true"></div>
+  </section>
+
+</main>
+
+<div id="start-menu" aria-hidden="true">
+  <div class="start-menu-banner">
+    <span>LUCA-OS</span>
+  </div>
+  <ul>
+    <li><button data-open="win-about">🗂 About Me</button></li>
+    <li><button data-open="win-links">🔗 Links</button></li>
+    <li><button data-open="win-terminal">🖥 Terminal</button></li>
+    <li class="start-menu-sep" role="separator"></li>
+    <li><button id="toggle-crt-btn">📺 Toggle CRT FX</button></li>
+    <li><button id="shutdown-btn">⏻ Shut Down...</button></li>
+  </ul>
+</div>
+
+<footer id="taskbar">
+  <button id="start-btn" aria-haspopup="true" aria-expanded="false">
+    <img src="assets/img/logo.png" alt="" class="start-logo" aria-hidden="true">
+    <span>START</span>
+  </button>
+  <div id="taskbar-tasks" aria-label="Open windows"></div>
+  <div class="tray">
+    <button id="music-btn" aria-label="Play or pause background music" title="Toggle music">
+      <span id="music-icon">🎵</span>
+    </button>
+    <span id="music-label">MUSIC: OFF</span>
+    <span id="clock" aria-live="off">00:00:00</span>
+  </div>
+</footer>
+
+<audio id="bg-audio" loop preload="none"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
