@@ -1,12 +1,8 @@
 # LUCA-OS 🖥️
 
-[![Status](https://img.shields.io/badge/Status-Online-39ff6a?style=flat-square&labelColor=03040a)](#)
-[![Engine](https://img.shields.io/badge/Made%20With-Vanilla%20JS-yellow?style=flat-square)](#)
-[![Age](https://img.shields.io/badge/Age-17-00fff7?style=flat-square)](#)
-
 **LUCA-OS** é um portfólio interativo e agregador de links (*linktree*) disfarçado de sistema operacional retrô baseado no design clássico do Windows 95 e interfaces CRT de fósforo verde. O projeto para centralizar meus projetos de desenvolvimento de jogos, redes sociais e informações de contato.
 
-> 🌐 **Acesse o sistema vivo aqui:** link.com
+> 🌐 **Acesse o sistema vivo aqui:** https://luca-os-hazel.vercel.app/
 
 ---
 
